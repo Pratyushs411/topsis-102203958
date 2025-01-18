@@ -65,15 +65,15 @@ def convert_to_csv(xlsx_file):
     """
     Convert an XLSX file to CSV and return the new filename.
     """
-    csv_file = xlsx_file.replace('.xlsx', '-data.csv')
+    base_filename = os.path.splitext(os.path.basename(xlsx_file))[0]
+    csv_file = f"102203958-{base_filename}.csv"
     data = pd.read_excel(xlsx_file)
     data.to_csv(csv_file, index=False)
     return csv_file
 
-if __name__ == "__main__":
-    # Command-line interface
+def main():
     if len(sys.argv) != 5:
-        print("Usage: python 102203958.py <InputDataFile> <Weights> <Impacts> <ResultFileName>")
+        print("Usage: topsis <InputDataFile> <Weights> <Impacts> <ResultFileName>")
         sys.exit(1)
 
     input_file = sys.argv[1]
@@ -87,3 +87,6 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"Error: {e}")
         sys.exit(1)
+
+if __name__ == "__main__":
+    main()

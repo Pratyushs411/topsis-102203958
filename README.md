@@ -14,17 +14,17 @@ This package provides an easy-to-use implementation of the TOPSIS method for ran
 - Handles weighted and impacted criteria for decision-making.
 
 ## Installation
-
+To install or upgrade to the latest version of this package, use the following command:
 ```bash
-pip install topsis-102203958
+pip install --upgrade topsis-102203958
 ```
 
 ## Usage
-This package is designed to run as a command-line utility. The script name is `102203958.py`.
+This package is designed to run as a command-line utility.
 
 ### Command Syntax:
 ```bash
-python 102203958.py <InputDataFile> <Weights> <Impacts> <ResultFileName>
+python topsis <InputDataFile> <Weights> <Impacts> <ResultFileName>
 ```
 
 ### Parameters:
@@ -45,7 +45,7 @@ Input file `data.xlsx`:
 
 Command:
 ```bash
-python 102203958.py data.xlsx "1,1,1,2" "+,+,-,+" result.csv
+python topsis data.xlsx "1,1,1,2" "+,+,-,+" result.csv
 ```
 
 Output file `result.csv`:
