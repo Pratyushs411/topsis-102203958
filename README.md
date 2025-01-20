@@ -24,7 +24,7 @@ This package is designed to run as a command-line utility.
 
 ### Command Syntax:
 ```bash
-python topsis <InputDataFile> <Weights> <Impacts> <ResultFileName>
+topsis <InputDataFile> <Weights> <Impacts> <ResultFileName>
 ```
 
 ### Parameters:
@@ -45,7 +45,7 @@ Input file `data.xlsx`:
 
 Command:
 ```bash
-python topsis data.xlsx "1,1,1,2" "+,+,-,+" result.csv
+topsis data.xlsx "1,1,1,2" "+,+,-,+" result.csv
 ```
 
 Output file `result.csv`:
